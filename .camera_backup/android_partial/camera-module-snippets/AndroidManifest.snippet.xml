@@ -1,0 +1,20 @@
+<manifest>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application>
+        <activity
+            android:name=".camera.ui.CameraLiveActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
+
+        <activity
+            android:name=".camera.ui.CameraSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".camera.ui.CameraPlaybackActivity"
+            android:exported="false" />
+    </application>
+</manifest>

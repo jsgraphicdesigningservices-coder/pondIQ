@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AquaFarm Monitor</string>
+    <string name="title_activity_main">AquaFarm Monitor</string>
+    <string name="package_name">app.lovable.a125a195a138f46b096ee87bfcc54d251</string>
+    <string name="custom_url_scheme">app.lovable.a125a195a138f46b096ee87bfcc54d251</string>
+</resources>

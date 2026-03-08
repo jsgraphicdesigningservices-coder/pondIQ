@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:show_buffering="always"
+        app:use_controller="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <View
+            android:id="@+id/connectionStatusDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@android:color/holo_red_light" />
+
+        <TextView
+            android:id="@+id/connectionStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Connecting" />
+
+        <ImageView
+            android:id="@+id/motionAlertIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@android:drawable/stat_notify_more"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <ImageButton
+            android:id="@+id/btnFullScreen"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_crop" />
+
+        <ImageButton
+            android:id="@+id/btnScreenshot"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/presence_video_online" />
+
+        <ImageButton
+            android:id="@+id/btnMute"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_lock_silent_mode" />
+
+        <ImageButton
+            android:id="@+id/btnHd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="HD"
+            android:src="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+            android:id="@+id/btnSd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="SD"
+            android:src="@android:drawable/btn_star_big_off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <ImageButton
+            android:id="@+id/btnPanLeft"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageButton
+            android:id="@+id/btnTiltUp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/arrow_up_float" />
+
+        <ImageButton
+            android:id="@+id/btnTiltDown"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/arrow_down_float" />
+
+        <ImageButton
+            android:id="@+id/btnPanRight"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/ic_media_next" />
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/ic_menu_add" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@android:drawable/ic_menu_revert" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <Switch
+            android:id="@+id/switchMotionDetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motion Detection" />
+
+        <SeekBar
+            android:id="@+id/seekMotionSensitivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingTop="6dp">
+
+        <Button
+            android:id="@+id/btnOpenSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="launchCameraSettings"
+            android:text="Settings" />
+
+        <Button
+            android:id="@+id/btnOpenPlayback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:onClick="launchPlayback"
+            android:text="Playback" />
+    </LinearLayout>
+
+</LinearLayout>
